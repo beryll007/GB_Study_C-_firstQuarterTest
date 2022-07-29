@@ -1,5 +1,10 @@
-﻿string [] stringArray = {"Russia", "Denmark", "Kazan"};
-int stringLength = 3;
+﻿void ShowArray (string[] array)
+{
+    for (int i = 0; i < array.Length; i++)
+        Console.Write(array[i] + " ");
+
+    Console.WriteLine();
+}
 
 int FindFinalArrayLength (string [] StringArray, int stringLength)
 {   
@@ -33,6 +38,11 @@ string[] CreateFillFinArray (string [] initArray, int finArrayLength, int string
 
 
 
+string [] initialArray = {"Russia", "Denmark", "Kazan", "USA"};
+int stringLength = 3;
+int finalArrayLength = FindFinalArrayLength(initialArray, stringLength);
+string [] finalArray = CreateFillFinArray(initialArray, finalArrayLength, stringLength);
+ShowArray(finalArray);
 
 
 
