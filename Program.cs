@@ -14,7 +14,22 @@ int FindFinalArrayLength (string [] StringArray, int stringLength)
     return count;
 }
 
+string[] CreateFillFinArray (string [] initArray, int finArrayLength, int stringLength)
+{
+    string [] finArray = new string [finArrayLength];
+    
+    int index = 0;
 
+    for (int i = 0; i < initArray.Length; i++)
+    {
+        if(initArray[i].Length <= stringLength)
+        {
+            finArray[index] = initArray[i];
+            index = index + 1;
+        }   
+    }
+    return finArray;
+}
 
 
 
